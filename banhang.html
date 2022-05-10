@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Inconsolata:wght@300;400&family=Luxurious+Roman&family=Montserrat:wght@200&family=Neonderthaw&family=Nunito:wght@200&family=Open+Sans:wght@300&family=Playfair+Display&family=Roboto:wght@300;400&family=Rubik&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
+    <title>LÊ CÔNG TIẾN PH26838</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header></header>
+        <nav class="menu">
+            <ul class="list-menu">
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="bosuutap.html">Bộ sưu tập</a></li>
+                <li><a href="dangki.html">Đăng ký</a></li>
+                <li><a href="banhang.html">Bán hàng</a></li>
+            </ul>
+        </nav>
+        <video playsinline autoplay muted loop id="video">
+            <source src="img/video.mp4" type="video/mp4">
+          </video>
+        <div class="table">
+            <center>
+                <select id="price-range" class="price-range" onclick="showEachList()">
+                    <option disabled selected>Mức giá</option>
+                    <option value="1">$0-$500</option>
+                    <option value="2">$500-$1200</option>
+                    <option value="3">$1200-$2000</option>
+                    <option value="4">$2000-$3000</option>
+                    <option value="5">Hiển thị toàn bộ</option>
+                </select>
+            </center>
+
+
+            <center>
+                <table border="1" id="mytable" class="mytable" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" name="" id="checkAll" onchange="checkAll(this)"></th>
+                            <th>Hàng hóa</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mylist">
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" id="" onchange="turnQtyInput(this)"></td>
+                            <td>Iphone 11</td>
+                            <td>$800</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>Iphone 12 Pro</td>
+                            <td>$1200</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>Iphone 13 Pro Max</td>
+                            <td>$1100</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>AirPort</td>
+                            <td>$100</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>Macbook</td>
+                            <td>$2000</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>IPad</td>
+                            <td>$999</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>Iphone XS Max</td>
+                            <td>$390</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                        <tr class="row">
+                            <td><input type="checkbox" name="checkbox" onchange="turnQtyInput(this)"></td>
+                            <td>Macbook Pro</td>
+                            <td>$3000</td>
+                            <td><input type="number" name="qty" class="amoutn" disabled onchange="countCost()"></td>
+                            <td><span class="cost"></span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">TỔNG</td>
+                            <td><span id="sum-money"></span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </center>
+        </div>
+        <footer>PH26838 - LÊ CÔNG TIẾN PH26838</footer>
+    </div>
+
+    <script src="Js/banhang.js"></script>
+</body>
+
+</html>

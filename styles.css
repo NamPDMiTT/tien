@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: 700;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Luxurious Roman', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Neonderthaw', cursive;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapper {
+    background-image: url(img/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1200px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+.wrapper-index {
+    width: 1200px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 400px;
+    background-image: url('img/Banner.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#video {
+    position: relative;
+    width: 1200px;
+}
+
+footer {
+    width: 1200px;
+    height: 100px;
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
+.list-menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.list-menu li {
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+    width: 150px;
+}
+
+.list-menu li a {
+    padding: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.list-menu li:hover {
+    color: #000;
+    background-color: #537895;
+}
+
+
+/* ------------------------------------------------Trang chủ------------------------------------------- */
+
+.iphone13 {
+    margin-top: 20px;
+    width: 1200px;
+    min-height: 500px;
+}
+
+#title-ip13 {
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+#title-ip13 h1 {
+    font-size: 50px;
+}
+
+.img-ip13 {
+    display: block;
+    margin-top: 20px;
+    width: 700px;
+    height: 400px;
+}
+
+.button-ip13 button {
+    width: 140px;
+    height: 40px;
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.buy {
+    text-decoration: none;
+    color: #01baef;
+}
+
+#title-ip {
+    font-size: 50px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+
+/* ----------------------------------Giới thiệu---------------------------------- */
+
+.background {
+    width: 1200px;
+    height: 600px;
+    background-image: url('img/gioithieu.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-gioithieu {
+    margin-left: 50px;
+    line-height: 50px;
+    letter-spacing: 3px;
+}
+
+.title-gioithieu p {
+    color: white;
+}
+
+.title-gioithieu a {
+    color: white;
+    text-decoration: none;
+}
+
+.title-gioithieu h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.list-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.title-album {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-album ul {
+    position: relative;
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+label {
+    position: relative;
+}
+
+.text-album {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    z-index: 100;
+}
+
+.title-album div {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    background: #18191f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05), 4px 4px 6px rgba(0, 0, 0, 0.2), inset -1px -1px 4px rgba(255, 255, 255, 0.05), inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.text-album:checked~div {
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05), inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    color: yellow;
+    text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+    animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+/* --------------------------------------SLIDER----------------------------------------- */
+
+.slider {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#next {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: 50%;
+    border-radius: 50%;
+    background-image: url('img/next.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px #192041;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#prev {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: 50%;
+    border-radius: 50%;
+    background-image: url('img/prev.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px #192041;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#count-img {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 0 0 10px #000;
+    text-align: center;
+    width: 90px;
+    height: 30px;
+    top: 91%;
+    left: 45%;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.ti-angle-right,
+.ti-angle-left {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.slider #next {
+    left: 94.5%;
+}
+
+.slider #prev:hover,
+.slider #next:hover {
+    background-color: #0e2fd4;
+    color: white;
+}
+
+.item {
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+.item img {
+    width: 800px;
+    height: 500px;
+    animation: zoom 1s ease;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* -------------------------------ĐĂNG KÍ----------------------------------- */
+
+.container {
+    background-image: url('img/subbgc.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 40px auto;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #09203f;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.select,
+#box-hobby {
+    width: 435px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 2px solid rgb(194, 192, 192);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#male {
+    width: 410px;
+    height: 15px;
+    padding: 13px 17px;
+    border: 2px solid rgb(194, 192, 192);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#content {
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+.so-thich,
+.male {
+    margin-left: 10px;
+    line-height: 40px;
+}
+
+.box-input {
+    width: 445px;
+    height: 35px;
+}
+
+.select {
+    padding-left: 10px;
+    width: 450px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.note {
+    width: 440px;
+    height: 70px;
+    border: 2px solid rgb(194, 192, 192);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+.sign-up {
+    margin-bottom: 20px;
+}
+
+.sub-btn {
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+label {
+    font-size: 15px;
+}
+
+legend {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+.info input {
+    font-size: 20px;
+    border: 2px solid rgb(194, 192, 192);
+    border-radius: 5px;
+    background-color: none;
+}
+
+.info input:focus {
+    border-color: gray;
+    outline: 0;
+    background-color: none;
+    font-size: 20px;
+}
+
+#input span {
+    visibility: hidden;
+}
+
+.info.error span {
+    visibility: visible;
+    color: red;
+}
+
+.info.error .note,
+.info.error .dk {
+    background-color: #06bcfb;
+    background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
+}
+
+.info.success .note,
+.info.success .dk {
+    border: 2px solid green;
+}
+
+.info span {
+    color: red;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+#price-range {
+    margin: 20px;
+    padding: 5px;
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 75%;
+    right: 1%;
+}
+
+table {
+    background-image: url('img/table_bgc.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+table th {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+}
+
+table td {
+    padding: 5px 20px;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.cost {
+    color: black;
+    font-size: 15px;
+}
+
+#sum-money {
+    font-size: 15px;
+}
+
+.amoutn {
+    width: 50px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LÊ CÔNG TIẾN - PH26838</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Inconsolata:wght@300;400&family=Luxurious+Roman&family=Montserrat:wght@200&family=Neonderthaw&family=Nunito:wght@200&family=Open+Sans:wght@300&family=Playfair+Display&family=Roboto:wght@300;400&family=Rubik&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header></header>
+        <nav class="menu">
+            <ul class="list-menu">
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="bosuutap.html">Bộ sưu tập</a></li>
+                <li><a href="dangki.html">Đăng ký</a></li>
+                <li><a href="banhang.html">Bán hàng</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+
+            <h2 class="sub-title">Đăng ký thành viên</h2>
+            <div id="content">
+                <form id="input-info" method="post" onsubmit="return kiemTra()">
+                    <div class="info">
+                        <legend>Mã sinh viên</legend>
+                        <input placeholder="" type="text" class="box-input" id="msv">
+                        <br>
+                        <span id="title-msv"></span>
+                    </div>
+
+                    <div class="info">
+                        <legend>Họ và Tên</legend>
+                        <input type="text" class="box-input" id="name">
+                        <br>
+                        <span id="title-name"></span>
+                    </div>
+
+                    <div class="info">
+                        <legend>Email</legend>
+                        <input type="email" class="box-input" id="email">
+                        <span id="title-email"></span>
+                        <br>
+                    </div>
+
+                    <div class="info">
+                        <legend>Giới tính</legend>
+                        <div id="male">
+                            <input value="Nam" type="radio" name="gender"> Nam
+                            <input value="Nữ" type="radio" name="gender"> Nữ
+                        </div>
+                        <span id="title-gender"></span>
+                    </div>
+
+                    <div class="info">
+                        <legend>Sở thích</legend>
+                        <div id="box-hobby">
+                            <input type="checkbox" name="checkbox">
+                            <label>Đọc sách</label>
+                            <input type="checkbox" name="checkbox">
+                            <label>Du lịch</label>
+                            <input type="checkbox" name="check1box">
+                            <label>Âm nhạc</label>
+                            <input type="checkbox" name="checkbox">
+                            <label>Ẩm thực</label>
+                            <input type="checkbox" name="checkbox">
+                            <label>Khác</label>
+                        </div>
+                        <span id="title-hobby"></span>
+                    </div>
+
+                    <div class="info">
+                        <legend>Quốc tịch</legend>
+                        <select name="select" class="select" id="nationality">
+                            <option value="0">Chọn Quốc Tịch</option>
+                            <option value="1">Việt Nam</option>
+                            <option value="2">China</option>
+                            <option value="3">Japan</option>
+                            <option value="4">Korea</option>
+                        </select>
+                        <br>
+                        <span id="title-nationality"></span>
+                    </div>
+
+                    <div class="info">
+                        <legend class="ghi-chu">Ghi chú</legend>
+                        <textarea type="textarea" class="note" id="note"></textarea><br>
+                        <span id="title-note"></span>
+                    </div>
+                    <div class="sign-up">
+                        <button class="sub-btn">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>PH26838 - LÊ CÔNG TIẾN PH26838</footer>
+    </div>
+    <script src="Js/dangki.js"></script>
+</body>
+
+</html>
